@@ -50,7 +50,7 @@ class App extends Component {
     }
     return filteredTasks.map((task) => (
       <Task key={task._id} task={task} />
-      // <pageOne />
+      // <PageOne />
     ));
   }
 
@@ -71,8 +71,6 @@ class App extends Component {
           </label>
 
           <AccountsUIWrapper />
-
-          <pageOne />
 
           { this.props.currentUser ?
             <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >

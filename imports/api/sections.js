@@ -2,4 +2,4 @@ import { Mongo } from 'meteor/mongo';
 
 export const Tasks = new Mongo.Collection('tasks');
 
-export const PageOne = new Mongo.Collection('pageone');
+export const StorePageOneData = new Mongo.Collection('storePageOneData');
