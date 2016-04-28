@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { createContainer } from 'meteor/react-meteor-data';
 
 import { Tasks } from '../api/sections.js';
+import { PageOne } from '../api/sections.js';
 
 import Task from './Task.jsx';
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
@@ -49,6 +50,7 @@ class App extends Component {
     }
     return filteredTasks.map((task) => (
       <Task key={task._id} task={task} />
+      // <pageOne />
     ));
   }
 
@@ -69,6 +71,8 @@ class App extends Component {
           </label>
 
           <AccountsUIWrapper />
+
+          <pageOne />
 
           { this.props.currentUser ?
             <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
