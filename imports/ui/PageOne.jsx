@@ -47,11 +47,13 @@ export default class PageOne extends Component {
 
   render() {
     return (
-      <div className='PageOne'>
+      <div className='container'>
         <AccountsUIWrapper />
         <h1 className='headings'>Peer Support Facilitator Recruitment</h1>
+        <div className='intro'>
           <p>There are 5 pages to this application form - please allow yourself sufficient time to complete the application.</p>
           <p>* Required</p>
+          </div>
           <h2 className='headings'>A bit about you</h2>
           <form className="new-task">
             <input type="text" ref="firstName" placeholder="First Name *" />
@@ -69,10 +71,10 @@ export default class PageOne extends Component {
             <input type="text" ref="textInput" ref='course' placeholder="What course are you studying?" />
             <label>Expected Year of Graduation *
               <select>
-              <option>2016</option> <option>2017</option> <option>2018</option>
-              <option>2019</option> <option>2020</option> <option>2021</option>
-              <option>2022</option> <option>2023</option> <option>2024</option>
-              <option>2025</option>
+              <option value='2016'>2016</option> <option value='2017'>2017</option> <option value='2018'>2018</option>
+              <option value='2019'>2019</option> <option value='2020'>2020</option> <option value='2021'>2021</option>
+              <option value='2022'>2022</option> <option value='2023'>2023</option> <option value='2024'>2024</option>
+              <option value='2025'>2025</option>
             </select>
           </label>
           <h4>Which peer support group do you wish to facilitate? *</h4>

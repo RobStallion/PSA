@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class pageTwo extends Component {
   render() {
     return (
-      <div className='PageTwo'>
+      <div className='container'>
         <h1 className='headings'>Peer Support Facilitator Recruitment</h1>
         <h2 className='headings'>Looking After Your Wellbeing</h2>
         <h4>Please list 5 things that you would do to wind down and relax after a stressful
