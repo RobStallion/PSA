@@ -66,8 +66,8 @@ export default class PageOne extends Component {
             <input type="text" ref="personalEmail" placeholder="Personal Email Address *" />
             <input type="text" ref="mobile" placeholder="Mobile Number *" />
             <input type="text" ref="uniName" placeholder="University Name" />
-            <textarea rows='6' cols='50' ref='uniAddress' placeholder='University Address *' ></textarea>
-            <textarea rows='6' cols='50' ref='homeAddress'placeholder='Home Address (if different)'></textarea>
+            <textarea className='placetext' rows='6' cols='50' ref='uniAddress' placeholder='University Address *' ></textarea>
+            <textarea className='placetext' rows='6' cols='50' ref='homeAddress'placeholder='Home Address (if different)'></textarea>
             <input type="text" ref="textInput" ref='course' placeholder="What course are you studying?" />
             <label>Expected Year of Graduation *
               <select>

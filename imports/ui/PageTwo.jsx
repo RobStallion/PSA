@@ -13,17 +13,17 @@ export default class pageTwo extends Component {
           the discussion of destructive behaviours or suicidal thoughts can be triggering. It
           is useful to think about how you would cope with distressing conversations. To score
           full marks for this question you must include 5 things.</p>
-        <textarea rows='10' cols='50' placeholder='Please type answer here' />
+        <textarea className='placetext' rows='10' cols='50' placeholder='Please type answer here' />
         <h2 className='headings'>Your Motivation</h2>
         <h4 className='headings'>Please let us know why you are interested in this project.</h4>
         <p>(Maximum 200 words)</p>
-        <textarea rows='10' cols='50' placeholder='Please type answer here' />
+        <textarea className='placetext' rows='10' cols='50' placeholder='Please type answer here' />
         <h2 className='headings'>Understanding What It Takes To Be a Peer Support Group
           Facilitator</h2>
         <h4 className='headings'>What do you think are the three key skills necessary to run good
            support group sessions?</h4>
         <p>To score full marks for this question you must include 3 things.</p>
-        <textarea rows='10' cols='50' placeholder='Please type answer here' />
+        <textarea className='placetext' rows='10' cols='50' placeholder='Please type answer here' />
           <h4 className='headings'>
             What three skills do you think are important when running a
             successful student-led project?</h4>
@@ -32,7 +32,7 @@ export default class pageTwo extends Component {
             Group facilitators also need to be involved in the management, organisation and promotion
             of the support group. To score full marks for this question you must include 3 skills.
           </p>
-          <textarea rows='10' cols='50' placeholder='Please type answer here' />
+          <textarea className='placetext' rows='10' cols='50' placeholder='Please type answer here' />
             <h4 className='headings'>
               Can you think of three reasons why supervision is important
               and useful?</h4>
@@ -43,7 +43,7 @@ export default class pageTwo extends Component {
               run support groups for Student Minds. To score full marks for this question you must
               include 3 things.
             </p>
-            <textarea rows='10' cols='50' placeholder='Please type answer here' />
+            <textarea className='placetext' rows='10' cols='50' placeholder='Please type answer here' />
       </div>
     );
   }

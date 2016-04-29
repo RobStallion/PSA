@@ -82,6 +82,18 @@ textarea {
   padding: 7px 0;
 }
 
+.placetext::-webkit-input-placeholder {
+   padding-left: 10px;
+}
+
+p {
+   padding: 10px;
+}
+
+h4 {
+   padding-left: 10px;
+}
+
 .new-task input {
   box-sizing: border-box;
   padding: 7px 0;
