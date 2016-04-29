@@ -12,9 +12,32 @@ export default class PageOne extends Component {
 
     // Find the text field via React ref
     const firstName = ReactDOM.findDOMNode(this.refs.firstName).value.trim();
+    const lastName = ReactDOM.findDOMNode(this.refs.lastName).value.trim();
+    const gender = ReactDOM.findDOMNode(this.refs.gender).value.trim();
+    let otherGender = ReactDOM.findDOMNode(this.refs.otherGender).value.trim();
+    otherGender = (otherGender) ? otherGender : 'empty'
+    const DOB = ReactDOM.findDOMNode(this.refs.DOB).value.trim();
+    const uniEmail = ReactDOM.findDOMNode(this.refs.uniEmail).value.trim();
+    const personalEmail = ReactDOM.findDOMNode(this.refs.personalEmail).value.trim();
+    const mobile = ReactDOM.findDOMNode(this.refs.mobile).value.trim();
+    const uniName = ReactDOM.findDOMNode(this.refs.uniName).value.trim();
+    const uniAddress = ReactDOM.findDOMNode(this.refs.uniAddress).value.trim();
+    const homeAddress = ReactDOM.findDOMNode(this.refs.homeAddress).value.trim();
+    const course = ReactDOM.findDOMNode(this.refs.course).value.trim();
 
     StorePageOneData.insert({
       firstName,
+      lastName,
+      gender,
+      otherGender,
+      DOB,
+      uniEmail,
+      personalEmail,
+      mobile,
+      uniName,
+      uniAddress,
+      homeAddress,
+      course,
       createdAt: new Date(), // current time
       owner: Meteor.userId(),           // _id of logged in user
       username: Meteor.user().username,  // username of logged in user
@@ -32,18 +55,18 @@ export default class PageOne extends Component {
           <h2 className='headings'>A bit about you</h2>
           <form className="new-task">
             <input type="text" ref="firstName" placeholder="First Name *" />
-            <input type="text" ref="textInput" placeholder="Last Name *" />
-            <label>Male<input type="radio" name='gender' /></label>
-            <label>Female<input type="radio" name='gender' /></label>
-            <label>Other<input type="radio" name='gender' /><input type="text" ref="textInput" placeholder="please specify *" /></label>
-            <label>Date of Birth *<input type="date" ref="textInput" /></label>
-            <input type="text" ref="textInput" placeholder="University Email Address *" />
-            <input type="text" ref="textInput" placeholder="Personal Email Address *" />
-            <input type="text" ref="textInput" placeholder="Mobile Number *" />
-            <input type="text" ref="textInput" placeholder="University" />
-            <textarea rows='6' cols='50' placeholder='University Address *' ></textarea>
-            <textarea rows='6' cols='50' placeholder='Home Address (if different)'></textarea>
-            <input type="text" ref="textInput" placeholder="What course are you studying?" />
+            <input type="text" ref="lastName" placeholder="Last Name *" />
+            <label>Male<input ref="gender" type="radio" name='gender' id='male' /></label>
+            <label>Female<input ref="gender" type="radio" name='gender' id='female' /></label>
+            <label>Other<input ref="gender" type="radio" name='gender' id='otherGender' /><input type="text" ref="otherGender" placeholder="please specify *" /></label>
+            <label>Date of Birth *<input type="date" ref="DOB" /></label>
+            <input type="text" ref="uniEmail" placeholder="University Email Address *" />
+            <input type="text" ref="personalEmail" placeholder="Personal Email Address *" />
+            <input type="text" ref="mobile" placeholder="Mobile Number *" />
+            <input type="text" ref="uniName" placeholder="University Name" />
+            <textarea rows='6' cols='50' ref='uniAddress' placeholder='University Address *' ></textarea>
+            <textarea rows='6' cols='50' ref='homeAddress'placeholder='Home Address (if different)'></textarea>
+            <input type="text" ref="textInput" ref='course' placeholder="What course are you studying?" />
             <label>Expected Year of Graduation *
               <select>
               <option>2016</option> <option>2017</option> <option>2018</option>
