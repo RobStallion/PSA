@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { createContainer } from 'meteor/react-meteor-data'
 import { StorePageOneData } from '../api/sections.js'
 import Data from './Data.jsx'
@@ -6,13 +6,13 @@ import Data from './Data.jsx'
 // Task component - represents a single todo item
 class pageTwo extends Component {
   renderData() {
-   return this.props.pageOneData.map((data) => (
+    return this.props.pageOneData.map((data) => (
      <Data
        key={data._id}
        data={data}
      />
-   ));
- }
+   ))
+  }
   render() {
     return (
       <div>
@@ -20,7 +20,7 @@ class pageTwo extends Component {
           {this.renderData()}
         </ul>
       </div>
-    );
+    )
   }
 }
 

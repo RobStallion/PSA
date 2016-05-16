@@ -1,1 +1,1 @@
-import '../imports/api/sections.js';
+import '../imports/api/sections.js'
