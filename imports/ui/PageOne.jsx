@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 import { Button } from 'react-bootstrap'
-import { StorePageOneData } from '../api/sections.js';
-import AccountsUIWrapper from './AccountsUIWrapper.jsx';
+import { StorePageOneData } from '../api/sections.js'
+import AccountsUIWrapper from './AccountsUIWrapper.jsx'
 
 // Task component - represents a single todo item
 export default class PageOne extends Component {
@@ -11,19 +11,19 @@ export default class PageOne extends Component {
   handleSubmit() {
 
     // Find the text field via React ref
-    const firstName = ReactDOM.findDOMNode(this.refs.firstName).value.trim();
-    const lastName = ReactDOM.findDOMNode(this.refs.lastName).value.trim();
-    const gender = ReactDOM.findDOMNode(this.refs.gender).value.trim();
-    let otherGender = ReactDOM.findDOMNode(this.refs.otherGender).value.trim();
+    const firstName = ReactDOM.findDOMNode(this.refs.firstName).value.trim()
+    const lastName = ReactDOM.findDOMNode(this.refs.lastName).value.trim()
+    const gender = ReactDOM.findDOMNode(this.refs.gender).value.trim()
+    let otherGender = ReactDOM.findDOMNode(this.refs.otherGender).value.trim()
     otherGender = (otherGender) ? otherGender : 'empty'
-    const DOB = ReactDOM.findDOMNode(this.refs.DOB).value.trim();
-    const uniEmail = ReactDOM.findDOMNode(this.refs.uniEmail).value.trim();
-    const personalEmail = ReactDOM.findDOMNode(this.refs.personalEmail).value.trim();
-    const mobile = ReactDOM.findDOMNode(this.refs.mobile).value.trim();
-    const uniName = ReactDOM.findDOMNode(this.refs.uniName).value.trim();
-    const uniAddress = ReactDOM.findDOMNode(this.refs.uniAddress).value.trim();
-    const homeAddress = ReactDOM.findDOMNode(this.refs.homeAddress).value.trim();
-    const course = ReactDOM.findDOMNode(this.refs.course).value.trim();
+    const DOB = ReactDOM.findDOMNode(this.refs.DOB).value.trim()
+    const uniEmail = ReactDOM.findDOMNode(this.refs.uniEmail).value.trim()
+    const personalEmail = ReactDOM.findDOMNode(this.refs.personalEmail).value.trim()
+    const mobile = ReactDOM.findDOMNode(this.refs.mobile).value.trim()
+    const uniName = ReactDOM.findDOMNode(this.refs.uniName).value.trim()
+    const uniAddress = ReactDOM.findDOMNode(this.refs.uniAddress).value.trim()
+    const homeAddress = ReactDOM.findDOMNode(this.refs.homeAddress).value.trim()
+    const course = ReactDOM.findDOMNode(this.refs.course).value.trim()
 
     StorePageOneData.insert({
       firstName,
@@ -41,7 +41,7 @@ export default class PageOne extends Component {
       createdAt: new Date(), // current time
       owner: Meteor.userId(),           // _id of logged in user
       username: Meteor.user().username,  // username of logged in user
-    });
+    })
     this.props.history.push('/pagetwo')
   }
 
@@ -87,6 +87,6 @@ export default class PageOne extends Component {
           <Button onClick={this.handleSubmit.bind(this)}>Continue</Button>
         </form>
       </div>
-    );
+    )
   }
 }
